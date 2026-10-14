@@ -138,7 +138,3 @@ Open the local URL displayed in the terminal.
 
 
 
-\- Add PDF upload support.
-
-\- Expand retrieval to larger documents.
-
