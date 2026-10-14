@@ -1,8 +1,7 @@
-\# GenAI RAG PDF Assistant
+# GenAI RAG PDF Assistant
 
 
-
-\## Project Overview
+## Project Overview
 
 
 
@@ -10,83 +9,83 @@ A PDF Question Answering Assistant built using Retrieval-Augmented Generation (R
 
 
 
-\## Features
+## Features
 
 
 
-\- Extracts text from PDF pages using PyMuPDF.
+- Extracts text from PDF pages using PyMuPDF.
 
-\- Splits text into overlapping chunks.
+- Splits text into overlapping chunks.
 
-\- Generates embeddings using Sentence Transformers.
+- Generates embeddings using Sentence Transformers.
 
-\- Retrieves the top 3 matching chunks using cosine similarity.
+- Retrieves the top 3 matching chunks using cosine similarity.
 
-\- Uses a similarity threshold to filter potentially irrelevant questions.
+- Uses a similarity threshold to filter potentially irrelevant questions.
 
-\- Generates answers using Llama 3.2 (3B) through Ollama.
+- Generates answers using Llama 3.2 (3B) through Ollama.
 
-\- Displays answers with PDF page references and expandable source passages.
-
-
-
-\## Tech Stack
+- Displays answers with PDF page references and expandable source passages.
 
 
 
-\- Python
-
-\- Streamlit
-
-\- PyMuPDF
-
-\- NumPy
-
-\- Sentence Transformers (`all-MiniLM-L6-v2`)
-
-\- Ollama
-
-\- Llama 3.2 (3B)
+## Tech Stack
 
 
 
-\## RAG Workflow
+- Python
+
+- Streamlit
+
+- PyMuPDF
+
+- NumPy
+
+- Sentence Transformers (`all-MiniLM-L6-v2`)
+
+- Ollama
+
+- Llama 3.2 (3B)
 
 
 
-1\. Extract text from PDF pages.
-
-2\. Split text into overlapping chunks.
-
-3\. Generate embeddings for the chunks.
-
-4\. Convert the user's question into an embedding.
-
-5\. Retrieve the top 3 matching chunks using cosine similarity.
-
-6\. Pass the retrieved context and question to the LLM.
-
-7\. Display the answer and source passages.
+## RAG Workflow
 
 
 
-\## Setup and Usage
+1. Extract text from PDF pages.
+
+2. Split text into overlapping chunks.
+
+3. Generate embeddings for the chunks.
+
+4. Convert the user's question into an embedding.
+
+5. Retrieve the top 3 matching chunks using cosine similarity.
+
+6. Pass the retrieved context and question to the LLM.
+
+7. Display the answer and source passages.
 
 
 
-\### Prerequisites
+## Setup and Usage
 
 
 
-\- Python
-
-\- Ollama
-
-\- A local copy of the PDF used for testing
+### Prerequisites
 
 
 
-\### Install Dependencies
+- Python
+
+- Ollama
+
+- A local copy of the PDF used for testing
+
+
+
+### Install Dependencies
 
 ```bash
 
@@ -96,7 +95,7 @@ pip install -r requirements.txt
 
 
 
-\### Download the LLM
+### Download the LLM
 
 ```bash
 
@@ -106,7 +105,7 @@ ollama pull llama3.2:3b
 
 
 
-\### Run the Application
+### Run the Application
 
 ```bash
 
@@ -120,17 +119,22 @@ Open the local URL displayed in the terminal.
 
 
 
-\## Current Scope and Limitations
+## Current Scope and Limitations
 
 
 
-\- The current prototype processes PDF pages 12–18 of the configured textbook.
+- The current prototype processes PDF pages 12–18 of the configured textbook.
 
-\- Update `PDF\_PATH` in `app.py` to match the location of your local PDF.
+- Update `PDF\_PATH` in `app.py` to match the location of your local PDF.
 
 
 
-\## Future Improvements
+## Future Improvements
+
+
+- Add PDF upload support.
+
+- Expand retrieval to larger documents.
 
 
 
